@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AM'S | Accueil - Installation Windows & Office</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #0A1C2F; color: #EFF3F8; line-height: 1.5; }
+        :root { --accent-red: #C62828; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        
+        /* NAVBAR */
+        .navbar { background: rgba(10,28,47,0.95); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 16px 0; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; padding: 0 32px; }
+        .logo img { height: 55px; width: auto; display: block; border-radius: 50%; } 
+        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links a { text-decoration: none; font-weight: 600; color: #F0F4FA; transition: 0.2s; font-size: 1rem; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-red); }
+        .mobile-menu-icon { display: none; font-size: 1.8rem; color: white; cursor: pointer; }
+        
+        /* HERO */
+        .hero { text-align: center; padding: 60px 0 40px; }
+        .hero h1 { font-size: 3rem; color: var(--accent-red); margin-bottom: 16px; }
+        .hero p { font-size: 1.2rem; color: #BDC7D9; max-width: 700px; margin: 0 auto; }
+        
+        /* VIDEO */
+        .video-section { padding: 40px 0 60px; }
+        .video-wrapper { border-radius: 28px; overflow: hidden; box-shadow: 0 20px 35px -12px rgba(0,0,0,0.4); background: #000; }
+        video { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; }
+        
+        /* INFO CARDS */
+        .info-section { padding: 40px 0 60px; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .info-grid { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; }
+        .info-card { background: rgba(255,255,255,0.08); border-radius: 28px; padding: 28px; text-align: center; flex: 1; min-width: 220px; border: 1px solid rgba(255,255,255,0.1); transition: 0.2s; }
+        .info-card i { font-size: 2.5rem; color: var(--accent-red); margin-bottom: 16px; }
+        .info-card h3 { margin-bottom: 8px; }
+        
+        /* FOOTER */
+        footer { background: #051525; padding: 40px 0 24px; text-align: center; }
+        .footer-bottom { font-size: 0.85rem; color: #96A7BF; }
+        
+        /* WHATSAPP FLOAT */
+        .whatsapp-float { position: fixed; bottom: 24px; right: 24px; background: #25D366; width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 99; text-decoration: none; color: white; transition: 0.2s; }
+        .whatsapp-float:hover { transform: scale(1.05); }
+        
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+            .nav-links { display: none; }
+            .mobile-menu-icon { display: block; }
+            .nav-links.active { display: flex; flex-direction: column; background: #0A1C2F; position: absolute; top: 75px; left: 0; width: 100%; padding: 28px; gap: 20px; z-index: 999; }
+            .container { padding: 0 20px; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="videos/Logo Am's.png" alt="AM'S Logo">
+        </div>
+        <div class="mobile-menu-icon" id="mobileMenuToggle"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="./index.html" class="active">Accueil</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./a-propos.html">À propos</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1>AM'S – AZMICK MUPONDO SOCRATE</h1>
+            <p>Installation Windows 10/11 & Microsoft Office • Rapide, sécurisé et professionnel</p>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <div class="video-wrapper">
+                <!-- ⚠️ IMPORTANT : Remplacez le chemin ci-dessous par le bon chemin de votre vidéo -->
+                <video autoplay loop playsinline controls>
+                    <!-- Option 1 : si votre vidéo est dans le même dossier que index.html -->
+                    <source src="./videos/IMG_20260524_162551_939~2.mp4" type="video/mp4">
+                    
+                    <!-- Option 2 : si vous voulez tester avec une vidéo en ligne (décommentez et commentez l'autre) -->
+                    <!-- <source src="https://assets.mixkit.co/videos/preview/mixkit-technician-fixing-a-computer-32703-large.mp4" type="video/mp4"> -->
+                    
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card"><i class="fab fa-windows"></i><h3>Windows 10 & 11</h3><p>Installation rapide et activation officielle</p></div>
+                <div class="info-card"><i class="fas fa-file-excel"></i><h3>Microsoft Office</h3><p>Suite complète, licence authentique</p></div>
+                <div class="info-card"><i class="fas fa-tachometer-alt"></i><h3>Optimisation PC</h3><p>Performances maximales garanties</p></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-bottom">
+            <p>© 2025 AM'S – Conçu par Azmick Moupondo Socrate | Étudiant à l’École Informatique des Finances (EIFI) – Niveau L2C</p>
+            <p style="margin-top: 8px;">Disponible et à votre service <i class="fas fa-heart" style="color:#C62828;"></i></p>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/243826092962" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+    // Menu mobile
+    const toggleBtn = document.getElementById('mobileMenuToggle');
+    const navLinks = document.getElementById('navLinks');
+    if(toggleBtn) toggleBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
+</script>
+</body>
+</html>
